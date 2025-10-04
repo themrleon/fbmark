@@ -17,7 +17,7 @@ There are two tools available, rectangle and sierpinski:
 <img width="500" height="500" alt="image" src="https://github.com/user-attachments/assets/8f608b86-3204-42f3-b7e5-27ee0363ff07" />
 
 # Tests
-Raspberry Pi 1 model B 512MB (full overclock):
+Raspberry Pi 1 model B 512MB / armv6 32 bit (full overclock):
 ```bash
 $ ./fbmark_rectangle 
 Rectangle frame buffer test bench
@@ -37,7 +37,27 @@ Benchmarking   131072 iterations:    12.16 Frames/second
 Benchmarking   262144 iterations:     6.32 Frames/second
 ```
 
-AMD Ryzen 7 5800H:
+Luckfox Pico / Rockchip rv1103 / armv7 32 bit:
+```bash
+$ ./fbmark_rectangle 
+Rectangle frame buffer test bench
+Benchmarking 160x120 size: 41.58 MPixels/second
+
+$ ./fbmark_sierpinski 
+Sierpinski frame buffer test bench
+
+Benchmarking     1024 iterations:   953.31 Frames/second
+Benchmarking     2048 iterations:   748.70 Frames/second
+Benchmarking     4096 iterations:   524.43 Frames/second
+Benchmarking     8192 iterations:   328.75 Frames/second
+Benchmarking    16384 iterations:   188.11 Frames/second
+Benchmarking    32768 iterations:   101.90 Frames/second
+Benchmarking    65536 iterations:    53.14 Frames/second
+Benchmarking   131072 iterations:    27.18 Frames/second
+Benchmarking   262144 iterations:    13.69 Frames/second
+```
+
+AMD Ryzen 7 5800H / x86 64 bit:
 ```bash
 $ ./fbmark_rectangle 
 Rectangle frame buffer test bench
