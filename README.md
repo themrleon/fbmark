@@ -3,7 +3,8 @@ Tools to benchmark the Linux framebuffer (`/dev/fb0`) using CPU / software-rende
 
 # How to compile ?
 * Compile: `make`
-* Static compile: `make LDFLAGS="-static"`
+* Static compile and strip symbols: `make LDFLAGS="-static -s"`
+* Cross-compile: `make CC=arm-linux-gnueabihf-gcc`
 * Install: `sudo make install`
 * Uninstall: `sudo make uninstall`
 
